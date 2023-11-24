@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Registration</title>
+</head>
+<body>
+  <h1>New User</h1>
+  <form method="post">
+    <label>
+      Email:<br>
+      <input type="email" name="email">
+    </label><br>
+    <label>
+      Password:<br>
+      <input type="password" name="password">
+    </label><br>
+    <label>
+      Password Again: <br>
+      <input type="password" name="passwordAgain">
+    </label><br>
+    <label>
+      Age:<br>
+      <input type="number" name="age">
+    </label><br>
+    <%errors.forEach((msg) => { %>
+      <p class="errorMessage" style="color: red;"><%= msg %></p>
+    <% }); %>
+    <input type="submit" value="Register Account">
+  </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Products</title>
+</head>
+<body>
+  <h1>Add New Products</h1>
+  <form method="post">
+    <label>
+      Serial Number:
+      <input type="text" name="prodSerial" value="<%= serialNum %>" maxlength="6">
+    </label>
+    <label>
+      Condition:
+      <select name="prodCondition">
+        <option value="perfect" selected>Perfect</option>
+        <option value="likenew">Like New</option>
+        <option value="damaged">Damaged</option>
+      </select>
+    </label>
+    <label>
+      Name:
+      <input type="text" name="prodName" value="<%= prodName %>">
+    </label>
+    <% errors.forEach((msg) => { %>
+      <p class="errorMessage"><%= msg %></p>
+    <% }) %>
+    <input type="submit" value="Submit Product">
+  </form>
+</body>
+</html>

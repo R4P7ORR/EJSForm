@@ -1,0 +1,4 @@
+/* eslint-disable prettier/prettier */
+export class User{
+  constructor(public email: string, public password: string, public age: number){}
+}
